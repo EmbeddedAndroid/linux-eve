@@ -15,7 +15,7 @@ Linux Support for the Eve Chromebook (Pixelbook i7)
 ### Needs Debugging
   * Audio
     * max98927 speaker amp is probing
-    * pacmd list-cards only sounds the HDMI audio device
+    * pacmd list-cards only displays the HDMI audio device
   * Microphone
     * Audio routing issue it seems
   * Headphone Jack
