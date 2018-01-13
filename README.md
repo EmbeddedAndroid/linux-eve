@@ -43,4 +43,8 @@ This is a guide to setup a native Linux install on your Eve Chromebook. I have c
     libinput:name:*ACPI0C50:00 18D1:5028 Touchpad:dmi:*svnGoogle:*pnEve*
     LIBINPUT_ATTR_PRESSURE_RANGE=15:35
     ```
+    * Once you have added the configuration, run the follow command to update
+    ```
+    sudo udevadm hwdb --update
+    ```
   
