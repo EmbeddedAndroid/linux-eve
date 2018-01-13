@@ -35,7 +35,9 @@ This is a guide to setup a native Linux install on your Eve Chromebook. I have c
   * After the install is done, reboot, and boot the machine via Legacy mode off the internal hard drive. 
 
 ### Tweaks
+#### Kernel
   * Install the latest released Linux Kernel - http://kernel.ubuntu.com/~kernel-ppa/mainline/
+#### Touchpad
   * Fix the touchpad pressure sensitivity 
     * As root create a file at /etc/udev/hwdb.d/99-touchpad-pressure.hwdb
     * My configuration is listed below, if you don't like it, knock yourself out - https://wayland.freedesktop.org/libinput/doc/latest/touchpad_pressure.html#touchpad_pressure_hwdb
@@ -47,4 +49,12 @@ This is a guide to setup a native Linux install on your Eve Chromebook. I have c
     ```
     sudo udevadm hwdb --update
     ```
-  
+    * Reboot
+#### Backlight
+  *  Clone this repo, and run the scripts/backlight/setup-systemd.sh
+    * This will install a simple service to enable and control the backlight
+  * Reboot
+  * Map the brightness
+    * Setting -> Keyboard -> Custom
+    * Increase brightness = /usr/bin/local/brightness --increase
+    * Decrease brightness = /usr/bin/local/brightness --decrease
