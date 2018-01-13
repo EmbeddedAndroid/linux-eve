@@ -11,8 +11,8 @@ Linux Support for the Eve Chromebook (Pixelbook i7)
   * Wacom Touch Screen
   * Touchpad (needs pressure tweaks for gestures, see below)
   * ACPI Buttons
+  * Backlight control (needs some custom scripts, see below)
 ### Needs Debugging
-  * Backlight control
   * Audio
   * Microphone
   * Headphone Jack
