@@ -18,6 +18,9 @@ Linux Support for the Eve Chromebook (Pixelbook i7)
     * External Speakers
 ### Needs Debugging
   * Audio Routing
+    ```
+    Kbl Audio Port: ASoC: no backend DAIs enabled for Kbl Audio Port
+    ```
 
 ## Overview
 
