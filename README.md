@@ -12,14 +12,12 @@ Linux Support for the Eve Chromebook (Pixelbook i7)
   * Touchpad (needs pressure tweaks for gestures, see below)
   * ACPI Buttons
   * Backlight control (needs some custom scripts, see below)
+  * Audio (needs chromeos firmware, see below)
+    * Microphone
+    * Headphone Jack
+    * External Speakers
 ### Needs Debugging
-  * Audio
-    * max98927 speaker amp is probing
-    * pacmd list-cards only displays the HDMI audio device
-  * Microphone
-    * Audio routing issue it seems
-  * Headphone Jack
-    * RT5663 codec is loaded at boot
+  * Audio Routing
 
 ## Overview
 
@@ -62,3 +60,9 @@ This is a guide to setup a native Linux install on your Eve Chromebook. I have c
     * Setting -> Keyboard -> Custom
     * Increase brightness = /usr/bin/local/brightness --increase
     * Decrease brightness = /usr/bin/local/brightness --decrease
+### Audio
+  * Copy the dfw_sst.bin firmware provided in this repo to /lib/firmware
+  * Add a blacklist entry in /etc/modprobe.d/blacklist.conf
+    ```
+    blacklist snd_hda_intel
+    ```
